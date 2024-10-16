@@ -1,0 +1,39 @@
+# EdgeDB Auth Starter with Mantine UI and Next.js
+
+This project is a starter template for building authentication systems using EdgeDB, Mantine UI, and Next.js.
+
+## Technologies Used:
+- EdgeDB: Modern database with a powerful query language
+- Mantine UI: React component library for building user interfaces
+- Next.js: React framework for server-side rendering and static site generation
+
+## Project Structure:
+/pages: Next.js pages and API routes
+/components: Reusable React components
+/styles: CSS and Mantine theme customizations
+/lib: Utility functions and EdgeDB client setup
+/dbschema: EdgeDB schema definitions
+
+## Key Files:
+- edgedb.toml: EdgeDB project configuration
+- next.config.js: Next.js configuration
+- package.json: Project dependencies and scripts
+
+## Development:
+- Run `yarn dev` to start the development server
+- Run `yarn build` to create a production build
+- Run `yarn start` to start the production server
+
+## EdgeDB Commands:
+- `npx edgedb migration create`: Create a new EdgeDB migration
+- `npx edgedb migrate`: Apply pending migrations
+
+## Notes:
+- Ensure EdgeDB is installed and running locally
+- Update .env.local with your EdgeDB connection details
+- Customize Mantine UI theme in /styles/theme.ts
+
+# Ignore patterns for Cursor AI
+node_modules/
+.next/
+out/
