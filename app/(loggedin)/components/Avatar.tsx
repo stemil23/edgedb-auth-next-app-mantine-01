@@ -1,7 +1,7 @@
 import { Avatar } from '@mantine/core';
 // import { IconStar } from '@tabler/icons-react';
 
-export function UserAvatar() {
+export default function UserAvatar() {
   return (
     <>
       {/* Letters with xl radius */}

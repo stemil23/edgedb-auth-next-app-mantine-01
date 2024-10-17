@@ -1,11 +1,15 @@
-'use client'
+'use client';
 
-import { auth } from '@/edgedb';
 import { Button } from '@mantine/core';
-export default function ButtonSignup() {
+import { auth } from '@/edgedb';
+
+export function ButtonSignup() {
     return (
-        <Button onClick={() => window.location.href = auth.getBuiltinUISignUpUrl()}>    
+        <Button onClick={() => {
+            const signUpUrl = auth.getBuiltinUISignUpUrl();
+            window.location.href = signUpUrl;
+        }}>
             Sign up
         </Button>
-    )
+    );
 }

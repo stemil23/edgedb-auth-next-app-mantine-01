@@ -2,8 +2,8 @@
 
 import { AppShell, Burger, Group } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { UserAvatar } from './Avatar';
-import ButtonLogout from '@/components/Authentication/ButtonLogout';
+import UserAvatar from './Avatar';
+import { ButtonLogout } from '@/components/Authentication/ButtonLogout';
 
 export function AuthShell({ children }: { children: React.ReactNode }) {
     const [opened, { toggle }] = useDisclosure();

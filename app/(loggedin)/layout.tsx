@@ -22,7 +22,7 @@ export default async function AuthLayout({ children }: { children: React.ReactNo
                 <MantineProvider theme={theme}>
 
                     <AuthShell>
-                        <Navbar signedIn={signedIn} />
+                        <Navbar />
                         {children}
                     </AuthShell>
                 </MantineProvider>
