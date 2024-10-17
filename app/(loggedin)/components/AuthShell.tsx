@@ -1,7 +1,8 @@
 'use client';
 
-import { AppShell, Burger } from '@mantine/core';
+import { AppShell, Burger, Group } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+import { UserAvatar } from './Avatar';
 
 export function AuthShell({ children }: { children: React.ReactNode }) {
     const [opened, { toggle }] = useDisclosure();
@@ -15,6 +16,9 @@ export function AuthShell({ children }: { children: React.ReactNode }) {
             <AppShell.Header>
                 <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
                 <div>Logo</div>
+                <Group justify="flex-end">
+                    <UserAvatar />
+                </Group>
             </AppShell.Header>
 
             <AppShell.Navbar p="md">Navbar</AppShell.Navbar>
