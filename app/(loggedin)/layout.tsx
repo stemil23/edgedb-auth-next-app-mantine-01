@@ -1,10 +1,18 @@
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { AuthShell } from './components/AuthShell';
 import { theme } from '../../theme';
+import { auth } from "@/edgedb";
+import { redirect } from "next/navigation";
+import Navbar from './components/NavBar';
 
-import { auth } from '@edgedb/auth-nextjs/app';
+export default async function AuthLayout({ children }: { children: React.ReactNode }) {
+    const session = await auth.getSession();
+    const signedIn = await session.isSignedIn();
+  
+    if (!signedIn) {
+      redirect(auth.getBuiltinUIUrl());
+    }
 
-export default function AuthLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
             <head>
@@ -12,7 +20,9 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
             </head>
             <body>
                 <MantineProvider theme={theme}>
-                    <AuthShell>{children}</AuthShell>
+
+                    <AuthShell>
+                    <Navbar signedIn={signedIn} />{children}</AuthShell>
                 </MantineProvider>
             </body>
         </html>
