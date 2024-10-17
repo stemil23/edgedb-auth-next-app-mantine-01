@@ -17,6 +17,7 @@ export default function ProfileFormClient({
           Name:
         </label>
         <Input
+          placeholder="Name"
           type="text"
           id="name"
           name="name"
@@ -29,6 +30,7 @@ export default function ProfileFormClient({
           Language:
         </label>
         <Input
+          placeholder="Language"
           type="text"
           id="language"
           name="language"
@@ -40,7 +42,7 @@ export default function ProfileFormClient({
         <label htmlFor="passport_issuer" className="block text-sm font-medium text-gray-700">
           Passport Issuer:
         </label>
-        <Input type="text" id="passport_issuer" name="passport_issuer" required />
+        <Input placeholder="Passport Issuer" type="text" id="passport_issuer" name="passport_issuer" required />
       </div>
 
       <Button type="submit" disabled={pending}>
