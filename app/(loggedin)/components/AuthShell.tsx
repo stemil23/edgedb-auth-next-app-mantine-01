@@ -3,6 +3,7 @@
 import { AppShell, Burger, Group } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { UserAvatar } from './Avatar';
+import ButtonLogout from '@/components/Authentication/ButtonLogout';
 
 export function AuthShell({ children }: { children: React.ReactNode }) {
     const [opened, { toggle }] = useDisclosure();
@@ -18,6 +19,7 @@ export function AuthShell({ children }: { children: React.ReactNode }) {
                 <div>Logo</div>
                 <Group justify="flex-end">
                     <UserAvatar />
+                    <ButtonLogout />
                 </Group>
             </AppShell.Header>
 
