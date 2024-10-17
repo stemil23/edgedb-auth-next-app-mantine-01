@@ -8,15 +8,10 @@ export default function ButtonLogout() {
 
     const handleSignOut = async () => {
         try {
-            const response = await fetch('/api/auth/signout', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            });
-
+            const response = await fetch('/api/auth/signout', { method: 'POST' });
             if (response.ok) {
                 router.push('/bye')
+                router.refresh()
             } else {
                 console.error('Signout failed');
             }
