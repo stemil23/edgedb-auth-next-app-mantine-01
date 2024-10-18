@@ -4,7 +4,7 @@ import { Avatar } from '@mantine/core';
 export default function UserAvatar() {
   return (
     <>
-      {/* Letters with xl radius */}
+
       <Avatar color="cyan" radius="xl">MK</Avatar>
     </>
   );
